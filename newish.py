@@ -1,28 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[12]:
-
-
 from PIL import Image
 import numpy as np
-
-
-# In[17]:
 
 
 def txt2bin(text): #converts text into 8 bit binary
     return ''.join(format(ord(i), '08b') for i in text)
 
 
-# In[16]:
-
-
 def int2bin(int):
     return "{0:08b}".format(int)
-
-
-# In[22]:
 
 
 def encode_text(cover_img, txt_msg, out_path):
@@ -62,10 +50,6 @@ def encode_text(cover_img, txt_msg, out_path):
     print("Success- your encoded image has been saved.")
  
 
-
-# In[23]:
-
-
 def banner():
     banner = """
    ___________________________ _    ____________
@@ -97,10 +81,3 @@ if __name__ == "__main__":
         out_img = input()
         # progress bar
         encode_text(cover_img, txt_msg, out_img)
-
-
-# In[ ]:
-
-
-
-
